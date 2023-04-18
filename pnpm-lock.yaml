@@ -5,6 +5,7 @@ specifiers:
   '@neoconfetti/svelte': ^1.0.0
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/adapter-cloudflare': ^2.2.0
+  '@sveltejs/adapter-cloudflare-workers': ^1.1.0
   '@sveltejs/kit': ^1.5.0
   '@types/cookie': ^0.5.1
   svelte: ^3.54.0
@@ -18,6 +19,7 @@ devDependencies:
   '@neoconfetti/svelte': 1.0.0
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.15.7
   '@sveltejs/adapter-cloudflare': 2.2.0_@sveltejs+kit@1.15.7
+  '@sveltejs/adapter-cloudflare-workers': 1.1.0_@sveltejs+kit@1.15.7
   '@sveltejs/kit': 1.15.7_svelte@3.58.0+vite@4.2.1
   '@types/cookie': 0.5.1
   svelte: 3.58.0
@@ -432,6 +434,10 @@ packages:
     resolution: {integrity: sha512-bxUnRP8xptGRo8YXeY073DSpfK74XpSb0ZyRNpHV9WvLnJ7TwPOjZll8hTMin7zLC6iOp59pDZ8EQDj1gzgAQQ==}
     dev: true
 
+  /@iarna/toml/2.2.5:
+    resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
+    dev: true
+
   /@jridgewell/resolve-uri/3.1.0:
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==}
     engines: {node: '>=6.0.0'}
@@ -488,6 +494,17 @@ packages:
     dependencies:
       '@sveltejs/kit': 1.15.7_svelte@3.58.0+vite@4.2.1
       import-meta-resolve: 2.2.2
+    dev: true
+
+  /@sveltejs/adapter-cloudflare-workers/1.1.0_@sveltejs+kit@1.15.7:
+    resolution: {integrity: sha512-rRvvUJv0FkA29YPcAmhH5khik8orLnw7m+g+Ge9OR5yTP1BTwec6pYhhIjARmV2O+aOs34ZV+yEzawoQNh4fUw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0
+    dependencies:
+      '@cloudflare/workers-types': 4.20230404.0
+      '@iarna/toml': 2.2.5
+      '@sveltejs/kit': 1.15.7_svelte@3.58.0+vite@4.2.1
+      esbuild: 0.16.17
     dev: true
 
   /@sveltejs/adapter-cloudflare/2.2.0_@sveltejs+kit@1.15.7:
